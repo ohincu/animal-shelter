@@ -6,10 +6,10 @@ The possible outcomes are: return to owner, adoption, transfer, euthanasia or de
 ## Case Problem & Solution
 This case offers shelter employees two valuable opportunities:
 
-**1. Enhanced Support for Low Adoption Likelihood**  
-When an animal is predicted to have a low likelihood of adoption, it provides an opportunity for shelter employees to extend additional support in the effort to find them a new home. This proactive approach ensures that animals with lower adoption probabilities receive extra attention and care.  
+**1. Suport for animals with low adoption likelihood**  
+When an animal is predicted to have a low likelihood of adoption, it provides an opportunity for shelter employees to extend additional support in the effort to find them a new home. This approach ensures that animals with lower adoption probabilities receive extra attention and care.  
 
-**2. Resource Optimization Based on Adoption Likelihood**  
+**2. Resource optimization based on adoption likelihood**  
 The predictive model enables shelter employees to optimize their human, financial, and time resources based on the likelihood of adoption. For instance, if the model indicates a low adoption likelihood for particular animals, the shelter can allocate more efforts and resources to increase the chances of successful adoptions.
 
 ## Data
@@ -45,8 +45,8 @@ When it comes to outcomes, there are still outcomes when animals transfers and r
 Additionally, predicting rare cases like deaths proves to be impractical.
 ![](plots/confusion_matrix_outcome_type)
 
-As an extra step, I decided to group the outcomes into groups, to account for the similiarities between adoption and return to owner and
-the rare case of deaths.
+I suspect what shelter employees want to find out is whether animals will stay in shelter or will leave.
+Therefore, as an extra step, I decided to group the outcomes into groups, to account for the similiarities between adoption and return to owner and the rare case of deaths.
 The 3 groups are:
 1) Owner Found - returns to owners, adoptions
 2) Owner in Search - transfer
@@ -57,9 +57,8 @@ While this grouping might simplify the classification for resource management, i
 
 
 ## Conclusions
-As mentioned, additional data points would facilitate the modeling:
+As mentioned, additional data points would help in making better decisions:
 - intake timestamps - could allow adjust the model and predict how much time the pet is to stay in the shelter. This could be used by shelter employees to plan their resources. 
 - animal's conditions - an animals who was lost by the owner could be in a totally different conditions from an animal that was found on the street.
 
-Note: there are still quite some False Positives, the model could be refined to increase the level of False Negatives. This I will apply
-later.
+Note: there are still quite some False Positives, predicting more animals being returned and adopted. The model could be refined to increase the level of False Negatives, as a shelter employee would be better off not being overly optimistic. 
